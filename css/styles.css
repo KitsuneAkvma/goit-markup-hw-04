@@ -21,88 +21,85 @@
 /*---Icons---*/
 .icon {
   display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: var(--clr-blue);
-  fill: var(--clr-blue);
-}
-.icon-instagram {
-  width: 44px;
-  height: 44px;
-  background-position: 0 0;
-}
-.icon-twitter {
-  width: 32px;
-  height: 32px;
-  background-position: -48px 0;
-}
-.icon-facebook {
-  width: 32px;
-  height: 32px;
-  background-position: -96px 0;
-}
-.icon-linkedin {
-  width: 32px;
-  height: 32px;
-  background-position: -144px 0;
-}
-.icon-envelope {
-  width: 43px;
-  height: 32px;
-  background-position: -192px 0;
-}
-.icon-smartphone {
-  width: 20px;
-  height: 32px;
-  background-position: -288px 0;
-}
-.icon-company-1 {
-  width: 32px;
-  height: 32px;
-  background-position: -336px 0;
-}
-.icon-company-2 {
-  width: 32px;
-  height: 32px;
-  background-position: -384px 0;
-}
-.icon-company-3 {
-  width: 32px;
-  height: 32px;
-  background-position: -432px 0;
-}
-.icon-company-4 {
-  width: 33px;
-  height: 32px;
-  background-position: -480px 0;
-}
-.icon-company-5 {
-  width: 35px;
-  height: 32px;
-  background-position: -528px 0;
-}
-.icon-company-6 {
-  width: 32px;
-  height: 32px;
-  background-position: -576px 0;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
 }
 .icon-antenna-1 {
   width: 32px;
   height: 32px;
-  background-position: -624px 0;
+  background-position: 0 0;
+}
+.icon-astronaut-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
 }
 .icon-clock-1 {
   width: 32px;
   height: 32px;
-  background-position: -672px 0;
+  background-position: -96px 0;
+}
+.icon-company-1 {
+  width: 32px;
+  height: 32px;
+  background-position: -144px 0;
+}
+.icon-company-2 {
+  width: 32px;
+  height: 32px;
+  background-position: -192px 0;
+}
+.icon-company-3 {
+  width: 32px;
+  height: 32px;
+  background-position: -240px 0;
+}
+.icon-company-4 {
+  width: 33px;
+  height: 32px;
+  background-position: -288px 0;
+}
+.icon-company-5 {
+  width: 35px;
+  height: 32px;
+  background-position: -336px 0;
+}
+.icon-company-6 {
+  width: 32px;
+  height: 32px;
+  background-position: -384px 0;
 }
 .icon-diagram-1 {
   width: 32px;
   height: 32px;
+  background-position: -432px 0;
+}
+.icon-envelope {
+  width: 43px;
+  height: 32px;
+  background-position: -480px 0;
+}
+.icon-facebook {
+  width: 32px;
+  height: 32px;
+  background-position: -576px 0;
+}
+.icon-instagram {
+  width: 32px;
+  height: 32px;
+  background-position: -624px 0;
+}
+.icon-linkedin {
+  width: 32px;
+  height: 32px;
+  background-position: -672px 0;
+}
+.icon-smartphone {
+  width: 20px;
+  height: 32px;
   background-position: -720px 0;
 }
-.icon-astronaut-1 {
+.icon-twitter {
   width: 32px;
   height: 32px;
   background-position: 0 -48px;
@@ -196,12 +193,6 @@ body {
 .nav-contacts > a:hover {
   color: var(--clr-blue);
 }
-.nav-mail::before {
-  content: url(/images/icons.svg#icon-envelope);
-}
-.nav-phone::before {
-  content: url(/images/icons.svg#icon-smartphone);
-}
 
 /*---Header section---*/
 
@@ -268,10 +259,21 @@ body {
 }
 .feature-img {
   margin-bottom: 2.143rem;
+  box-sizing: border-box;
 
   background-color: var(--clr-background-darker);
 
   border-radius: 4px;
+}
+.feature-img > * {
+  margin: 0;
+  padding: 0;
+}
+.feature-img > svg {
+  margin: 1.786rem 7.143rem;
+  justify-self: center;
+  width: 70px;
+  height: 70px;
 }
 .feature-text {
   width: 16.875rem;
@@ -371,6 +373,7 @@ body {
 }
 .team-member > ul > li:hover {
   background-color: var(--clr-blue);
+  fill: var(--clr-background);
 }
 /*---Our Clients---*/
 .clients {
@@ -401,6 +404,7 @@ body {
 }
 .client:hover {
   border-color: var(--clr-blue);
+  fill: var(--clr-blue);
 }
 /*---Footer---*/
 
@@ -506,6 +510,7 @@ body {
 .footer-social > li:hover {
   background-color: var(--clr-blue);
   opacity: 1;
+  fill: var(--clr-background);
 }
 /*----------------------
 ----STRONA PORTFOLIO----
