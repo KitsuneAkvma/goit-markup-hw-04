@@ -199,10 +199,13 @@ body {
   font-weight: var(--fw-med);
   color: var(--clr-font);
   text-decoration: none;
+  transition: 275ms;
 }
 .nav-button > a:hover,
 .nav-button > a:focus {
   color: var(--clr-blue);
+  transform: scale(1.1);
+  transition: 275ms;
 }
 #active-nav {
   color: var(--clr-blue);
@@ -221,6 +224,7 @@ body {
   font-weight: var(--fw-med);
   color: var(--clr-font);
   text-decoration: none;
+  transition: 375ms;
 }
 .nav-email > svg,
 .nav-phone > svg {
@@ -232,6 +236,7 @@ body {
 .nav-phone:focus {
   color: var(--clr-blue);
   fill: var(--clr-blue);
+  transition: 375ms;
 }
 
 /*--------------------*/
@@ -405,11 +410,13 @@ body {
   border-radius: 50%;
 
   cursor: pointer;
+  transition: 1075ms;
 }
 .team-member > ul > li:hover,
 .team-member > ul > li:focus {
   background-color: var(--clr-blue);
   fill: var(--clr-background);
+  transition: 575ms;
 }
 
 /*--------------------*/
@@ -439,11 +446,15 @@ body {
   fill: var(--clr-gray-element);
 
   cursor: pointer;
+  transition: 1075ms;
 }
 .client:hover,
 .client:focus {
   border-color: var(--clr-blue);
   fill: var(--clr-blue);
+
+  transform: scale(1.01);
+  transition: 575ms;
 }
 
 /*--------------------*/
@@ -488,6 +499,7 @@ body {
   letter-spacing: 0.72px;
   text-decoration: none;
 
+  transition: 275ms;
   opacity: 0.6;
 }
 .footer-phone {
@@ -498,6 +510,7 @@ body {
   letter-spacing: 0.72px;
   text-decoration: none;
 
+  transition: 275ms;
   opacity: 0.6;
 }
 .footer-mail:hover,
@@ -505,7 +518,9 @@ body {
 .footer-mail:focus,
 .footer-phone:focus {
   color: var(--clr-blue);
+
   opacity: 1;
+  transition: 275ms;
 }
 
 .join-us {
@@ -548,6 +563,7 @@ body {
   fill: var(--clr-background);
 
   cursor: pointer;
+  transition: 1075ms;
 }
 
 .footer-social > li:hover,
@@ -555,6 +571,7 @@ body {
   background-color: var(--clr-blue);
   opacity: 1;
   fill: var(--clr-background);
+  transition: 575ms;
 }
 
 /*----------------------*/
@@ -596,6 +613,7 @@ body {
 
   cursor: pointer;
   user-select: none;
+  transition: 575ms;
 }
 .filter > button:hover,
 .filter > button:focus {
@@ -604,6 +622,8 @@ body {
   background-color: var(--clr-blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  transition: 275ms;
 }
 
 /*----------------------*/
