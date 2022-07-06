@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <!--Metadata tags-->
     <meta charset="UTF-8" />
@@ -18,10 +18,8 @@
     />
 
     <!--Website tab tags-->
-
     <title>WebStudio</title>
   </head>
-
   <body>
     <header class="header">
       <!--Navbar elements-->
@@ -34,18 +32,26 @@
         <nav>
           <ul class="nav-buttons">
             <li class="nav-button">
-              <a class="nav-button" href="index.html">Agencja</a>
+              <a class="nav-button" id="active-nav" href="index.html">Agencja</a>
             </li>
             <li class="nav-button">
-              <a class="nav-button" id="active-nav" href="portfolio.html">Portfolio</a>
+              <a class="nav-button" href="portfolio.html">Portfolio</a>
             </li>
             <li class="nav-button"><a class="nav-button" href="#">Kontakt</a></li>
           </ul>
         </nav>
 
         <div class="nav-contacts">
-          <a class="nav-email" href="mail:info@devstudio.com">info@devstudio.com</a>
-          <a class="nav-phone" href="tel:111-111-111">+48 111 111 111</a>
+          <a class="nav-email" href="mail:info@devstudio.com">
+            <svg class="icon icon-envelope">
+              <use href="images/icons.svg#icon-envelope"></use></svg
+            >info@devstudio.com</a
+          >
+          <a class="nav-phone" href="tel:111-111-111"
+            ><svg class="icon icon-smartphone">
+              <use href="images/icons.svg#icon-smartphone"></use></svg
+            >+48 111 111 111</a
+          >
         </div>
       </div>
     </header>
@@ -183,22 +189,31 @@
         <a class="footer-mail" href="mailto:info@example.com">info@example.com</a>
         <a class="footer-phone" href="tel:+48111111111">+48 111 111 111</a>
       </section>
+
       <section class="join-us">
         <h3>dołącz do nas</h3>
-        <div class="footer-social">
-          <svg class="icon icon-instagram">
-            <use xlink:href="#icon-instagram"></use>
-          </svg>
-        </div>
-        <div class="footer-social">
-          <svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
-        </div>
-        <div class="footer-social">
-          <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
-        </div>
-        <div class="footer-social">
-          <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
-        </div>
+        <ul class="footer-social">
+          <li class="flex-center">
+            <svg class="icon icon-instagram">
+              <use href="images/icons.svg#icon-instagram"></use>
+            </svg>
+          </li>
+          <li class="flex-center">
+            <svg class="icon icon-instagram">
+              <use href="images/icons.svg#icon-twitter"></use>
+            </svg>
+          </li>
+          <li class="flex-center">
+            <svg class="icon icon-facebook">
+              <use href="images/icons.svg#icon-facebook"></use>
+            </svg>
+          </li>
+          <li class="flex-center">
+            <svg class="icon icon-linkedin">
+              <use href="images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </li>
+        </ul>
       </section>
     </footer>
   </body>
