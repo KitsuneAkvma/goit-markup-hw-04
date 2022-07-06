@@ -10,6 +10,7 @@
   --clr-blue: #2196f3;
   --clr-font: #212121;
   --clr-font-lght: #757575;
+  --clr-gray-element: #afb1b8;
 
   --ff-main: 'Roboto', sans-serif;
   --ff-logo: 'Raleway', sans-serif;
@@ -18,91 +19,108 @@
   --fw-bld: 700;
   --fw-blck: 900;
 }
+
+/*---predefined---*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*---Icons---*/
 .icon {
   display: inline-block;
-  background-repeat: no-repeat;
-  background-image: url(sprite.svg);
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
 }
+
 .icon-antenna-1 {
-  width: 32px;
-  height: 32px;
+  width: 4.375rem;
+  height: 4.375rem;
   background-position: 0 0;
 }
-.icon-astronaut-1 {
-  width: 32px;
-  height: 32px;
-  background-position: -48px 0;
-}
 .icon-clock-1 {
-  width: 32px;
-  height: 32px;
+  width: 4.375rem;
+  height: 4.375rem;
   background-position: -96px 0;
 }
+.icon-diagram-1 {
+  width: 4.375rem;
+  height: 4.375rem;
+  background-position: -432px 0;
+}
+.icon-astronaut-1 {
+  width: 4.375rem;
+  height: 4.375rem;
+  background-position: -48px 0;
+}
+
 .icon-company-1 {
-  width: 32px;
-  height: 32px;
+  width: 4rem;
+  height: 4rem;
   background-position: -144px 0;
 }
 .icon-company-2 {
-  width: 32px;
-  height: 32px;
+  width: 4.5rem;
+  height: 4.5rem;
   background-position: -192px 0;
 }
 .icon-company-3 {
-  width: 32px;
-  height: 32px;
+  width: 5rem;
+  height: 5rem;
   background-position: -240px 0;
 }
 .icon-company-4 {
-  width: 33px;
-  height: 32px;
+  width: 5.5rem;
+  height: 5.5rem;
   background-position: -288px 0;
 }
 .icon-company-5 {
-  width: 35px;
-  height: 32px;
+  width: 5rem;
+  height: 5rem;
   background-position: -336px 0;
 }
 .icon-company-6 {
-  width: 32px;
-  height: 32px;
+  width: 6.5rem;
+  height: 6.5rem;
   background-position: -384px 0;
 }
-.icon-diagram-1 {
-  width: 32px;
-  height: 32px;
-  background-position: -432px 0;
-}
-.icon-envelope {
-  width: 43px;
-  height: 32px;
-  background-position: -480px 0;
-}
-.icon-facebook {
-  width: 32px;
-  height: 32px;
-  background-position: -576px 0;
-}
+
 .icon-instagram {
-  width: 32px;
-  height: 32px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-position: -624px 0;
 }
+.icon-twitter {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: 0 -48px;
+}
+.icon-facebook {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: -576px 0;
+}
 .icon-linkedin {
-  width: 32px;
-  height: 32px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-position: -672px 0;
 }
-.icon-smartphone {
-  width: 20px;
-  height: 32px;
-  background-position: -720px 0;
+
+.icon-envelope {
+  width: 1.332em;
+  height: 1.332em;
+  vertical-align: bottom;
+
+  background-position: -480px 0;
 }
-.icon-twitter {
-  width: 32px;
-  height: 32px;
-  background-position: 0 -48px;
+
+.icon-smartphone {
+  width: 1.321em;
+  height: 1.321em;
+  vertical-align: bottom;
+  background-position: -720px 0;
 }
 
 /*---Body default values (fonts, colots etc.)---*/
@@ -171,7 +189,8 @@ body {
   color: var(--clr-font);
   text-decoration: none;
 }
-.nav-button > a:hover {
+.nav-button > a:hover,
+.nav-button > a:focus {
   color: var(--clr-blue);
 }
 #active-nav {
@@ -183,15 +202,24 @@ body {
   justify-content: flex-end;
 }
 
-.nav-contacts > a {
+.nav-email,
+.nav-phone {
   margin-right: 3.125rem;
 
   font-weight: var(--fw-med);
   color: var(--clr-font);
   text-decoration: none;
 }
-.nav-contacts > a:hover {
+.nav-email > svg,
+.nav-phone > svg {
+  margin-right: 0.625em;
+}
+.nav-email:hover,
+.nav-phone:hover,
+.nav-email:focus,
+.nav-phone:focus {
   color: var(--clr-blue);
+  fill: var(--clr-blue);
 }
 
 /*---Header section---*/
@@ -259,21 +287,16 @@ body {
 }
 .feature-img {
   margin-bottom: 2.143rem;
-  box-sizing: border-box;
 
   background-color: var(--clr-background-darker);
 
   border-radius: 4px;
 }
-.feature-img > * {
-  margin: 0;
-  padding: 0;
-}
+
 .feature-img > svg {
-  margin: 1.786rem 7.143rem;
-  justify-self: center;
-  width: 70px;
-  height: 70px;
+  margin: 1.786rem 6.25rem;
+  width: 4.375rem;
+  height: 4.375rem;
 }
 .feature-text {
   width: 16.875rem;
@@ -300,13 +323,8 @@ body {
   font-size: 36px;
   font-weight: var(--fw-bld);
 }
-.what-do-we-do-photos > ul > li > img {
-  margin-right: 2.143rem;
-}
 .what-do-we-do-photos > ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  gap: 2.143rem;
   list-style: none;
 }
 /*---Our team section---*/
@@ -330,7 +348,6 @@ body {
 }
 
 .team-members > ul {
-  display: flex;
   column-gap: 2.143rem;
 
   list-style: none;
@@ -370,16 +387,16 @@ body {
   margin-bottom: 2.143rem;
 
   border-radius: 50%;
+
+  cursor: pointer;
 }
-.team-member > ul > li:hover {
+.team-member > ul > li:hover,
+.team-member > ul > li:focus {
   background-color: var(--clr-blue);
   fill: var(--clr-background);
 }
 /*---Our Clients---*/
 .clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 2.143rem;
 
   list-style: none;
@@ -396,13 +413,17 @@ body {
 .client {
   margin-bottom: 5.875rem;
 
+  width: 10.625rem;
+  height: 5.75rem;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: var(--clr-gray-element);
+
+  cursor: pointer;
 }
-.client > svg {
-  margin: 1.107rem 2rem 0.891rem;
-}
-.client:hover {
+.client:hover,
+.client:focus {
   border-color: var(--clr-blue);
   fill: var(--clr-blue);
 }
@@ -459,7 +480,9 @@ body {
   opacity: 0.6;
 }
 .footer-mail:hover,
-.footer-phone:hover {
+.footer-phone:hover,
+.footer-mail:focus,
+.footer-phone:focus {
   color: var(--clr-blue);
   opacity: 1;
 }
@@ -498,16 +521,16 @@ body {
 .footer-social > li {
   width: 2.75rem;
   height: 2.75rem;
-  align-items: center;
-  justify-content: center;
 
-  background-color: var(--clr-background);
-
+  background-color: #ffffff1a;
   border-radius: 50%;
-  opacity: 0.1;
+  fill: var(--clr-background);
+
+  cursor: pointer;
 }
 
-.footer-social > li:hover {
+.footer-social > li:hover,
+.footer-social > li:focus {
   background-color: var(--clr-blue);
   opacity: 1;
   fill: var(--clr-background);
@@ -519,10 +542,9 @@ body {
 .portfolio {
   margin: 5.875rem 13.438rem;
 
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-self: center;
+  justify-self: center;
 }
 
 /*---Filters bar---*/
@@ -551,7 +573,8 @@ body {
   cursor: pointer;
   user-select: none;
 }
-.filter > button:hover {
+.filter > button:hover,
+.filter > button:focus {
   color: var(--clr-background);
 
   background-color: var(--clr-blue);
@@ -598,7 +621,8 @@ body {
   line-height: 2.143rem;
   letter-spacing: 0.03em;
 }
-.project:hover {
+.project:hover,
+.project:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
