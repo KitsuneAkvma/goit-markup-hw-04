@@ -224,7 +224,7 @@ body {
   font-weight: var(--fw-med);
   color: var(--clr-font);
   text-decoration: none;
-  transition: 375ms;
+  transition: 775ms;
 }
 .nav-email > svg,
 .nav-phone > svg {
@@ -453,7 +453,7 @@ body {
   border-color: var(--clr-blue);
   fill: var(--clr-blue);
 
-  transform: scale(1.01);
+  transform: scale(1.1);
   transition: 575ms;
 }
 
